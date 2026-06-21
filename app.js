@@ -190,19 +190,34 @@ function phraseObj(arr) {
   return { id: arr[0], ms: arr[1], en: arr[2], zh: arr[3], note: arr[4], audio: arr[5] };
 }
 
+const moduleImageMap = {
+  canteen: "assets/canteen-scene.png",
+  office: "assets/office-scene.png",
+  clinic: "assets/clinic-scene.png",
+  directions: "assets/directions-scene.png",
+  transport: "assets/transport-scene.png",
+  emergency: "assets/emergency-scene.png"
+};
+
 function moduleCardHTML(m) {
+  const imageSrc = moduleImageMap[m.id] || "assets/hero-campus.png";
+
   return `<a class="card module-card" href="module.html?m=${m.id}">
-    <span class="icon-badge">${m.icon}</span>
-    <p class="ms-title">${m.titleMs}</p>
-    <h3>${m.titleEn}<br><span style="font-size:.92rem;color:#667773">${m.titleZh}</span></h3>
-    <p>${m.summaryEn}<br>${m.summaryZh}</p>
-    <div class="module-meta">
-      <span class="pill">${m.level}</span>
-      <span class="pill orange-pill">Open →</span>
+    <div class="module-card-image">
+      <img src="${imageSrc}" alt="${m.titleEn} scene" loading="lazy" onerror="this.parentElement.style.display='none'">
+    </div>
+    <div class="module-card-body">
+      <span class="icon-badge">${m.icon}</span>
+      <p class="ms-title">${m.titleMs}</p>
+      <h3>${m.titleEn}<br><span style="font-size:.92rem;color:#667773">${m.titleZh}</span></h3>
+      <p>${m.summaryEn}<br>${m.summaryZh}</p>
+      <div class="module-meta">
+        <span class="pill">${m.level}</span>
+        <span class="pill orange-pill">Open →</span>
+      </div>
     </div>
   </a>`;
 }
-
 function renderModuleCards() {
   const container = $("#moduleCards");
   if (!container) return;
@@ -251,6 +266,12 @@ function renderModulePage() {
             <button class="btn secondary" id="markDone">Mark module completed</button>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="section module-scene-section">
+      <div class="module-scene-wide">
+        <img src="${moduleImageMap[m.id] || "assets/hero-campus.png"}" alt="${m.titleEn} scene" loading="lazy" onerror="this.parentElement.style.display='none'">
       </div>
     </section>
 
