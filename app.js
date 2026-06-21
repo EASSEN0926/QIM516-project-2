@@ -61,7 +61,7 @@ function playTTS(text) {
 }
 
 function playPhrase(phrase) {
-  // The website first tries local MP3: audio/[phrase-id].mp3.
+  // The website first tries local MP3: audio/[phrase-id].mp4.
   // If the file does not exist, it uses browser Malay TTS.
   const src = phrase.audio;
   if (!src) {
