@@ -632,14 +632,14 @@ window.CMSK_MODULES = [
       }
     ],
     "quickCheck": {
-      "question": "What does “Belok kiri” mean?",
-      "questionZh": "“Belok kiri” 是什么意思？",
-      "answer": "Turn left.",
+      "question": "You need to tell someone to turn left. Which phrase is correct?",
+      "questionZh": "你想表达“向左转”，应该选哪一句？",
+      "answer": "Belok kiri.",
       "options": [
-        "Turn left.",
-        "Turn right.",
-        "Go straight.",
-        "I need help."
+        "Belok kiri.",
+        "Belok kanan.",
+        "Jalan terus.",
+        "Saya perlukan bantuan."
       ]
     }
   },
@@ -987,16 +987,30 @@ window.CMSK_QUIZ = [
   {
     "moduleId": "canteen",
     "moduleTitle": "At the Canteen",
-    "question": "You want to ask the price of a meal. Which phrase is correct?",
-    "questionZh": "你想问一份饭多少钱，应该选哪一句？",
+    "question": "You want to ask the price of food. Which Malay phrase should you use?",
+    "questionZh": "你想问食物多少钱，应该使用哪一句马来语？",
     "answer": "Berapa harga ini?",
     "options": [
       "Berapa harga ini?",
       "Saya demam.",
-      "Di mana klinik?",
-      "Jalan terus."
+      "Belok kanan.",
+      "Saya di pintu utama."
     ],
-    "explanation": "Correct answer: Berapa harga ini?"
+    "explanation": "“Berapa harga ini?” means “How much is this?”"
+  },
+  {
+    "moduleId": "canteen",
+    "moduleTitle": "At the Canteen",
+    "question": "You want takeaway food. Which Malay phrase should you use?",
+    "questionZh": "你想要打包食物，应该使用哪一句马来语？",
+    "answer": "Saya mahu bungkus.",
+    "options": [
+      "Saya mahu bungkus.",
+      "Saya rasa pening.",
+      "Boleh ulang sekali lagi?",
+      "Lokasi saya betul."
+    ],
+    "explanation": "“Bungkus” is commonly used for takeaway food."
   },
   {
     "moduleId": "office",
@@ -1010,35 +1024,77 @@ window.CMSK_QUIZ = [
       "Saya sakit kepala.",
       "Belok kanan."
     ],
-    "explanation": "Correct answer: Saya mahu ambil kad pelajar."
+    "explanation": "“Kad pelajar” means student card."
+  },
+  {
+    "moduleId": "office",
+    "moduleTitle": "At the University Office",
+    "question": "You want to make an appointment. Which Malay phrase should you use?",
+    "questionZh": "你想预约，应该使用哪一句马来语？",
+    "answer": "Boleh saya buat temu janji?",
+    "options": [
+      "Boleh saya buat temu janji?",
+      "Ada air kosong?",
+      "Saya di hadapan hostel.",
+      "Ini kecemasan."
+    ],
+    "explanation": "“Temu janji” means appointment."
   },
   {
     "moduleId": "clinic",
     "moduleTitle": "At the Clinic",
-    "question": "You have a stomachache. Which phrase is correct?",
-    "questionZh": "你肚子痛，应该选哪一句？",
-    "answer": "Saya sakit perut.",
+    "question": "You have a headache. Which Malay phrase should you use?",
+    "questionZh": "你头痛，应该使用哪一句马来语？",
+    "answer": "Saya sakit kepala.",
     "options": [
-      "Saya sakit perut.",
+      "Saya sakit kepala.",
       "Saya mahu nasi goreng.",
-      "Saya di pintu utama.",
-      "Berapa harga ini?"
+      "Jalan terus.",
+      "Saya di pintu utama."
     ],
-    "explanation": "Correct answer: Saya sakit perut."
+    "explanation": "“Sakit kepala” means headache."
+  },
+  {
+    "moduleId": "clinic",
+    "moduleTitle": "At the Clinic",
+    "question": "You need a doctor. Which Malay phrase should you use?",
+    "questionZh": "你需要医生，应该使用哪一句马来语？",
+    "answer": "Saya perlukan doktor.",
+    "options": [
+      "Saya perlukan doktor.",
+      "Kurang gula, boleh?",
+      "Di mana perpustakaan?",
+      "Boleh tunggu sebentar?"
+    ],
+    "explanation": "“Doktor” means doctor."
   },
   {
     "moduleId": "directions",
     "moduleTitle": "Asking for Directions",
-    "question": "What does “Belok kiri” mean?",
-    "questionZh": "“Belok kiri” 是什么意思？",
-    "answer": "Turn left.",
+    "question": "You want to ask where the library is. Which phrase is correct?",
+    "questionZh": "你想问图书馆在哪里，应该选哪一句？",
+    "answer": "Di mana perpustakaan?",
     "options": [
-      "Turn left.",
-      "Turn right.",
-      "Go straight.",
-      "I need help."
+      "Di mana perpustakaan?",
+      "Saya demam.",
+      "Saya mahu bungkus.",
+      "Lokasi saya betul."
     ],
-    "explanation": "Correct answer: Turn left."
+    "explanation": "“Perpustakaan” means library."
+  },
+  {
+    "moduleId": "directions",
+    "moduleTitle": "Asking for Directions",
+    "question": "You want to say “turn right”. Which Malay phrase is correct?",
+    "questionZh": "你想表达“向右转”，哪一句马来语正确？",
+    "answer": "Belok kanan.",
+    "options": [
+      "Belok kanan.",
+      "Belok kiri.",
+      "Jalan terus.",
+      "Tolong cakap perlahan."
+    ],
+    "explanation": "“Kanan” means right."
   },
   {
     "moduleId": "transport",
@@ -1052,13 +1108,27 @@ window.CMSK_QUIZ = [
       "Berapa harga ini?",
       "Saya mahu ambil kad pelajar."
     ],
-    "explanation": "Correct answer: Saya di pintu utama."
+    "explanation": "“Pintu utama” means main gate."
+  },
+  {
+    "moduleId": "transport",
+    "moduleTitle": "Transportation & Grab",
+    "question": "You want the driver to wait for a moment. Which phrase is correct?",
+    "questionZh": "你想让司机等一下，应该选哪一句？",
+    "answer": "Boleh tunggu sebentar?",
+    "options": [
+      "Boleh tunggu sebentar?",
+      "Saya tidak makan daging.",
+      "Dokumen ini perlu dihantar ke mana?",
+      "Di mana klinik?"
+    ],
+    "explanation": "“Tunggu sebentar” means wait for a moment."
   },
   {
     "moduleId": "emergency",
     "moduleTitle": "Emergency Phrase Bank",
-    "question": "You need help immediately. Which phrase is the most direct?",
-    "questionZh": "你现在需要别人帮忙，哪一句最直接？",
+    "question": "You need help. Which Malay phrase is the most direct?",
+    "questionZh": "你需要帮助，哪一句马来语最直接？",
     "answer": "Saya perlukan bantuan.",
     "options": [
       "Saya perlukan bantuan.",
@@ -1066,83 +1136,13 @@ window.CMSK_QUIZ = [
       "Belok kiri.",
       "Kurang gula, boleh?"
     ],
-    "explanation": "Correct answer: Saya perlukan bantuan."
-  },
-  {
-    "moduleId": "canteen",
-    "moduleTitle": "At the Canteen",
-    "question": "Which phrase means “I want takeaway”?",
-    "questionZh": "哪一句表示“我要打包”？",
-    "answer": "Saya mahu bungkus.",
-    "options": [
-      "Saya mahu bungkus.",
-      "Saya rasa pening.",
-      "Boleh ulang sekali lagi?",
-      "Lokasi saya betul."
-    ],
-    "explanation": "Bungkus is commonly used for takeaway."
-  },
-  {
-    "moduleId": "office",
-    "moduleTitle": "At the University Office",
-    "question": "What does “temu janji” mean in the office module?",
-    "questionZh": "办公室模块里的 “temu janji” 是什么意思？",
-    "answer": "appointment",
-    "options": [
-      "appointment",
-      "medicine",
-      "main gate",
-      "library"
-    ],
-    "explanation": "Temu janji means appointment."
-  },
-  {
-    "moduleId": "clinic",
-    "moduleTitle": "At the Clinic",
-    "question": "Which phrase should be used carefully because it means emergency?",
-    "questionZh": "哪一句表示紧急情况，需要谨慎使用？",
-    "answer": "Ini kecemasan.",
-    "options": [
-      "Ini kecemasan.",
-      "Terima kasih.",
-      "Jalan terus.",
-      "Ada air kosong?"
-    ],
-    "explanation": "Kecemasan means emergency."
-  },
-  {
-    "moduleId": "directions",
-    "moduleTitle": "Asking for Directions",
-    "question": "What does “Jalan terus” mean?",
-    "questionZh": "“Jalan terus” 是什么意思？",
-    "answer": "Go straight.",
-    "options": [
-      "Go straight.",
-      "Turn left.",
-      "Turn right.",
-      "Wait here."
-    ],
-    "explanation": "Jalan terus means go straight."
-  },
-  {
-    "moduleId": "transport",
-    "moduleTitle": "Transportation & Grab",
-    "question": "You are walking to the pickup point now. Which phrase fits best?",
-    "questionZh": "你正在走去上车点，哪一句最合适？",
-    "answer": "Saya sedang berjalan ke sana.",
-    "options": [
-      "Saya sedang berjalan ke sana.",
-      "Saya tidak makan daging.",
-      "Dokumen ini perlu dihantar ke mana?",
-      "Di mana klinik?"
-    ],
-    "explanation": "This phrase means I am walking there now."
+    "explanation": "“Bantuan” means help."
   },
   {
     "moduleId": "emergency",
     "moduleTitle": "Emergency Phrase Bank",
-    "question": "Which phrase asks someone to speak slowly?",
-    "questionZh": "哪一句是请求对方说慢一点？",
+    "question": "You want someone to speak slowly. Which phrase is correct?",
+    "questionZh": "你想请对方说慢一点，应该选哪一句？",
     "answer": "Tolong cakap perlahan.",
     "options": [
       "Tolong cakap perlahan.",
@@ -1150,6 +1150,6 @@ window.CMSK_QUIZ = [
       "Boleh saya dapat ubat?",
       "Saya di hadapan hostel."
     ],
-    "explanation": "Perlahan means slowly."
+    "explanation": "“Perlahan” means slowly."
   }
 ];

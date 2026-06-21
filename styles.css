@@ -311,3 +311,9 @@ h3 { line-height:1.12; }
   }
 }
 
+/* Practice button state */
+.btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  transform: none;
+}

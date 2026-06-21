@@ -1,0 +1,25 @@
+Campus Malay Survival Kit - Assets to Upload
+
+Put these images in the assets/ folder with EXACT filenames:
+
+assets/hero-campus.png
+assets/canteen-scene.png
+assets/office-scene.png
+assets/clinic-scene.png
+assets/directions-scene.png
+assets/transport-scene.png
+assets/emergency-scene.png
+
+Rules:
+- lowercase filenames only
+- no spaces
+- no extra suffix like (1)
+- use .png exactly, unless you also change the file path in app.js
+
+YouTube video is already embedded in index.html:
+https://www.youtube.com/embed/QGJ_P1UOOww
+
+Files changed:
+index.html
+app.js
+styles.css
