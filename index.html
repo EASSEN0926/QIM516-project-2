@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Campus Malay Survival Kit</title>
+  <meta name="description" content="Campus Malay Survival Kit interactive multimedia application." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="home">
+  <div class="page-wrap">
+    <a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <a class="logo" href="index.html">
+    <span class="logo-mark">CM</span>
+    <span><span class="logo-title">Campus Malay</span><span class="logo-sub">Survival Kit</span></span>
+  </a>
+  <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+  <nav class="nav" aria-label="Main navigation">
+    <a data-nav="home" href="index.html">Home</a>
+    <a data-nav="modules" href="modules.html">Modules</a>
+    <a data-nav="practice" href="practice.html">Practice</a>
+    <a data-nav="bank" href="phrase-bank.html">Phrase Bank</a>
+    <a data-nav="progress" href="progress.html">Progress</a>
+  </nav>
+</header>
+    <main id="main">
+      <section class="hero">
+  <div>
+    <p class="eyebrow">Web-based interactive multimedia application</p>
+    <h1>Campus Malay for real student survival.</h1>
+    <p class="lead">A practical Malay learning website for new international students in Malaysia. Every phrase is shown in <strong>Malay, English, and Chinese</strong>, with audio support, scenario dialogue, quizzes, a searchable phrase bank, and progress tracking.</p>
+    <div class="actions">
+      <a class="btn primary" href="modules.html">Start learning</a>
+      <a class="btn secondary" href="#">Add YouTube / audio</a>
+    </div>
+    <div class="stat-row">
+      <span class="stat"><strong>6</strong> campus modules</span>
+      <span class="stat"><strong>50</strong> useful phrases</span>
+      <span class="stat"><strong>3</strong> languages</span>
+      <span class="stat"><strong>MP3/TTS</strong> audio ready</span>
+    </div>
+  </div>
+  <div class="hero-art">
+    <img src="assets/hero-campus.svg" alt="Campus Malay Survival Kit hero illustration">
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <p class="eyebrow">Why this application exists</p>
+    <h2>International students often need Malay outside the classroom.</h2>
+    <p>The application focuses on campus contexts: canteens, offices, clinics, directions, transportation, and emergency help. It is designed for short, practical learning instead of heavy textbook study.</p>
+  </div>
+  <div class="grid cols-3">
+    <article class="card"><span class="icon-badge">😟</span><h3>Communication anxiety</h3><p>New students may avoid daily situations because they are afraid of misunderstanding others.</p></article>
+    <article class="card"><span class="icon-badge">🎯</span><h3>Contextual learning</h3><p>Each lesson is built around real campus tasks, not random vocabulary lists.</p></article>
+    <article class="card"><span class="icon-badge">🎧</span><h3>Pronunciation support</h3><p>The website supports your own Malay MP3 files and browser Malay text-to-speech fallback.</p></article>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <p class="eyebrow">Scenario Video</p>
+    <h2>Watch a short campus survival example.</h2>
+    <p>This video supports visual learning before students enter the phrase modules.</p>
+  </div>
+  <div class="media-frame">
+    <video controls poster="assets/video-placeholder.svg">
+      <source src="assets/campus_scenarios_preview.mp4" type="video/mp4">
+      Your browser does not support video.
+    </video>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <p class="eyebrow">Quick start</p>
+    <h2>Recommended first modules</h2>
+  </div>
+  <div class="grid cols-3" id="homeModulePreview"></div>
+</section>
+
+</main>
+    <footer class="footer">
+  <p><strong>Campus Malay Survival Kit</strong></p>
+</footer>
+  </div>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

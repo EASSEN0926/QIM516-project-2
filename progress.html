@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Progress | Campus Malay Survival Kit</title>
+  <meta name="description" content="Campus Malay Survival Kit interactive multimedia application." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="progress">
+  <div class="page-wrap">
+    <a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <a class="logo" href="index.html">
+    <span class="logo-mark">CM</span>
+    <span><span class="logo-title">Campus Malay</span><span class="logo-sub">Survival Kit</span></span>
+  </a>
+  <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+  <nav class="nav" aria-label="Main navigation">
+    <a data-nav="home" href="index.html">Home</a>
+    <a data-nav="modules" href="modules.html">Modules</a>
+    <a data-nav="practice" href="practice.html">Practice</a>
+    <a data-nav="bank" href="phrase-bank.html">Phrase Bank</a>
+    <a data-nav="progress" href="progress.html">Progress</a>
+  </nav>
+</header>
+    <main id="main">
+      <section class="section">
+  <div class="section-head">
+    <p class="eyebrow">Progress Tracking</p>
+    <h1 style="font-size:clamp(3rem,8vw,5.8rem)">Track explored modules.</h1>
+    <p class="lead">Your learning progress is saved in this browser, so you can review completed modules and practice results.</p>
+  </div>
+  <div class="card progress-layout">
+    <div class="ring">
+      <svg viewBox="0 0 120 120">
+        <circle class="bg" cx="60" cy="60" r="50"></circle>
+        <circle class="fill" data-ring-fill cx="60" cy="60" r="50"></circle>
+      </svg>
+      <strong data-progress-percent>0%</strong>
+    </div>
+    <div>
+      <h2>Completed modules</h2>
+      <div class="completed-list" id="completedModules"></div>
+      <p>Saved quiz questions answered: <strong data-quiz-total>0</strong></p>
+      <p>Saved correct answers: <strong data-quiz-score>0</strong></p>
+      <div class="actions">
+        <button class="btn primary" id="completeAll">Demo: complete all</button>
+        <button class="btn secondary" id="resetProgress">Reset module progress</button>
+        <button class="btn danger" id="resetQuizStats">Reset quiz stats</button>
+      </div>
+    </div>
+  </div>
+</section>
+    </main>
+    <footer class="footer">
+  <p><strong>Campus Malay Survival Kit</strong></p>
+</footer>
+  </div>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

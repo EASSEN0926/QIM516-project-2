@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="120" viewBox="0 0 360 120">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop stop-color="#0f7c6b"/>
+      <stop offset="1" stop-color="#073b34"/>
+    </linearGradient>
+  </defs>
+  <rect width="360" height="120" rx="32" fill="#f3fffb"/>
+  <circle cx="62" cy="60" r="38" fill="url(#g)"/>
+  <text x="62" y="71" font-family="Arial, sans-serif" font-size="30" font-weight="800" text-anchor="middle" fill="#fff">CM</text>
+  <text x="118" y="52" font-family="Arial, sans-serif" font-size="25" font-weight="800" fill="#073b34">Campus Malay</text>
+  <text x="118" y="82" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#0f7c6b">Survival Kit</text>
+</svg>

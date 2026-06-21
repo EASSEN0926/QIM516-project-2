@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Practice | Campus Malay Survival Kit</title>
+  <meta name="description" content="Campus Malay Survival Kit interactive multimedia application." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="practice">
+  <div class="page-wrap">
+    <a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <a class="logo" href="index.html">
+    <span class="logo-mark">CM</span>
+    <span><span class="logo-title">Campus Malay</span><span class="logo-sub">Survival Kit</span></span>
+  </a>
+  <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+  <nav class="nav" aria-label="Main navigation">
+    <a data-nav="home" href="index.html">Home</a>
+    <a data-nav="modules" href="modules.html">Modules</a>
+    <a data-nav="practice" href="practice.html">Practice</a>
+    <a data-nav="bank" href="phrase-bank.html">Phrase Bank</a>
+    <a data-nav="progress" href="progress.html">Progress</a>
+  </nav>
+</header>
+    <main id="main">
+      <section class="section">
+  <div class="section-head">
+    <p class="eyebrow">Scenario Trainer</p>
+    <h1 style="font-size:clamp(3rem,8vw,5.8rem)">Practice with instant feedback.</h1>
+    <p class="lead">This page checks whether learners can choose the correct Malay phrase for real campus situations. Feedback appears immediately after each answer.</p>
+  </div>
+  <div class="quiz-shell">
+    <aside class="quiz-side">
+      <article class="card">
+        <h3>Practice progress</h3>
+        <p>Total saved questions answered: <strong data-quiz-total>0</strong></p>
+        <p>Total saved correct answers: <strong data-quiz-score>0</strong></p>
+        <p>This browser stores quiz statistics locally so you can review your practice history.</p>
+      </article>
+    </aside>
+    <article class="card quiz-card" id="practiceCard"></article>
+  </div>
+</section>
+    </main>
+    <footer class="footer">
+  <p><strong>Campus Malay Survival Kit</strong></p>
+</footer>
+  </div>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="720" viewBox="0 0 980 720" fill="none">
+  <rect width="980" height="720" rx="46" fill="#EAFBF4"/>
+  <circle cx="132" cy="111" r="132" fill="#D5F3E7"/>
+  <circle cx="838" cy="627" r="178" fill="#FFE4B5"/>
+  <rect x="148" y="142" width="684" height="422" rx="36" fill="white" stroke="#BEE6D8" stroke-width="4"/>
+  <rect x="204" y="210" width="178" height="132" rx="24" fill="#FFF2D8"/>
+  <rect x="402" y="210" width="178" height="132" rx="24" fill="#E4F3FF"/>
+  <rect x="600" y="210" width="178" height="132" rx="24" fill="#E9FBF4"/>
+  <rect x="204" y="372" width="574" height="46" rx="23" fill="#E9FBF4"/>
+  <rect x="204" y="440" width="362" height="46" rx="23" fill="#FFF2D8"/>
+  <text x="293" y="287" font-size="54" text-anchor="middle">🍽️</text>
+  <text x="491" y="287" font-size="54" text-anchor="middle">🏥</text>
+  <text x="689" y="287" font-size="54" text-anchor="middle">🧭</text>
+  <text x="491" y="160" font-family="Arial" font-size="34" font-weight="800" text-anchor="middle" fill="#073B34">Real campus Malay, one situation at a time</text>
+  <text x="491" y="405" font-family="Arial" font-size="26" font-weight="700" text-anchor="middle" fill="#0F665A">Malay · English · Chinese</text>
+  <text x="385" y="472" font-family="Arial" font-size="24" font-weight="700" text-anchor="middle" fill="#8A5B00">Audio + Quiz + Phrase Bank</text>
+</svg>

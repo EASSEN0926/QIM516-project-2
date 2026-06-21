@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#073B34"/>
+  <circle cx="150" cy="120" r="160" fill="#0F7C6B" opacity=".45"/>
+  <circle cx="1080" cy="620" r="220" fill="#FFB84D" opacity=".5"/>
+  <rect x="210" y="150" width="860" height="420" rx="44" fill="#FFFFFF" opacity=".95"/>
+  <polygon points="575,285 575,435 710,360" fill="#0F7C6B"/>
+  <text x="640" y="120" text-anchor="middle" font-family="Arial" font-size="42" font-weight="800" fill="#fff">YouTube / Local Video Area</text>
+  <text x="640" y="625" text-anchor="middle" font-family="Arial" font-size="30" font-weight="700" fill="#fff">Replace the video link in config.js</text>
+</svg>
