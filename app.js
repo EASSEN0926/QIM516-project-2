@@ -341,7 +341,7 @@ function renderModulePage() {
             <h3>${m.quickCheck.question}</h3>
             <p>${m.quickCheck.questionZh}</p>
             <div class="option-list">
-              ${m.quickCheck.options.map(opt => `<button class="option">${opt}</button>`).join("")}
+              ${m.quickCheck.options.map(opt => `<button class="option" data-option="${attrSafe(opt)}">${opt}</button>`).join("")}
             </div>
             <div class="feedback" aria-live="polite"></div>
           </div>
@@ -368,20 +368,28 @@ function renderModulePage() {
 
 function setupQuickChecks(root = document) {
   $all(".quick-check", root).forEach(box => {
-    const answer = box.dataset.answer;
+    const answer = answerSafe(box.dataset.answer);
     const feedback = $(".feedback", box);
+
     $all(".option", box).forEach(btn => {
       btn.addEventListener("click", () => {
+        if (btn.disabled) return;
+
+        const selected = answerSafe(btn.dataset.option || btn.textContent);
+        const correct = selected === answer;
+
         $all(".option", box).forEach(o => {
           o.disabled = true;
-          if (o.textContent.trim() === answer) o.classList.add("correct");
+          const optionValue = answerSafe(o.dataset.option || o.textContent);
+          if (optionValue === answer) o.classList.add("correct");
         });
-        if (btn.textContent.trim() === answer) {
-          feedback.textContent = "Correct. 很好，这个场景可以这样说。";
+
+        if (correct) {
+          feedback.textContent = "Correct. Good job.";
           feedback.className = "feedback good";
         } else {
           btn.classList.add("wrong");
-          feedback.textContent = `Not quite. Correct answer: ${answer}`;
+          feedback.textContent = `Not quite. Correct answer: ${box.dataset.answer}`;
           feedback.className = "feedback bad";
         }
       });
@@ -397,7 +405,7 @@ function renderPractice() {
   const card = $("#practiceCard");
   if (!card) return;
   const item = quizData[qIndex];
-  const progress = Math.round((qIndex / quizData.length) * 100);
+  const progress = Math.round(((qIndex + 1) / quizData.length) * 100);
   card.innerHTML = `
     <div class="quiz-top">
       <span class="pill">${item.moduleTitle}</span>
@@ -408,11 +416,11 @@ function renderPractice() {
     <h2 style="font-size:clamp(1.7rem,3vw,2.6rem)">${item.question}</h2>
     <p>${item.questionZh}</p>
     <div class="option-list">
-      ${shuffle([...item.options]).map(opt => `<button class="option">${opt}</button>`).join("")}
+      ${shuffle([...item.options]).map(opt => `<button class="option" data-option="${attrSafe(opt)}">${opt}</button>`).join("")}
     </div>
     <div class="feedback" aria-live="polite"></div>
     <div class="actions">
-      <button class="btn secondary" id="nextQ">Next</button>
+      <button class="btn secondary" id="nextQ" disabled>Next</button>
       <button class="btn danger" id="resetLiveQuiz">Reset this attempt</button>
     </div>
   `;
@@ -420,24 +428,35 @@ function renderPractice() {
   $all(".option", card).forEach(btn => {
     btn.addEventListener("click", () => {
       if (btn.disabled) return;
+
+      const selected = answerSafe(btn.dataset.option || btn.textContent);
+      const correctAnswer = answerSafe(item.answer);
+      const isCorrect = selected === correctAnswer;
+
       completedNow++;
+
       $all(".option", card).forEach(o => {
         o.disabled = true;
-        if (o.textContent.trim() === item.answer) o.classList.add("correct");
+        const optionValue = answerSafe(o.dataset.option || o.textContent);
+        if (optionValue === correctAnswer) o.classList.add("correct");
       });
-      if (btn.textContent.trim() === item.answer) {
+
+      if (isCorrect) {
         liveScore++;
         feedback.textContent = `Correct. ${item.explanation}`;
         feedback.className = "feedback good";
       } else {
         btn.classList.add("wrong");
-        feedback.textContent = `Not quite. ${item.explanation}`;
+        feedback.textContent = `Not quite. Correct answer: ${item.answer}. ${item.explanation}`;
         feedback.className = "feedback bad";
       }
-      const saved = getQuizState();
-      setQuizState({score: saved.score + (btn.textContent.trim() === item.answer ? 1 : 0), answered: saved.answered + 1});
+
+      const nextButton = $("#nextQ");
+      if (nextButton) nextButton.disabled = false;
+      setQuizState({score: liveScore, answered: completedNow});
     });
   });
+
   $("#nextQ").addEventListener("click", () => {
     qIndex = (qIndex + 1) % quizData.length;
     renderPractice();
@@ -531,3 +550,5 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 console.log("Campus Malay audio app loaded: exact recorded audio only, no alerts, no TTS, v4");
+
+console.log("Campus Malay quiz comparison fixed v10: selected answers use data-option value.");
